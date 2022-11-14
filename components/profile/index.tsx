@@ -94,6 +94,9 @@ const Profile = () => {
 const CoverWrapper = styled.div`
   width: 300px;
   height: 816px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: #e7edf3;
   box-shadow: 5px 5px 16px rgba(203, 215, 226, 0.8), -5px -5px 16px #ffffff;
   border-radius: 32px;
