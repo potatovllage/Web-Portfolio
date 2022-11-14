@@ -94,6 +94,7 @@ const Profile = () => {
 const CoverWrapper = styled.div`
   width: 300px;
   height: 816px;
+  margin-right: 44px;
   display: flex;
   justify-content: center;
   align-items: center;
