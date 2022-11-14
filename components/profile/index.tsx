@@ -12,6 +12,7 @@ import hoverGitHub from "../../assets/Icon/hoverGitHub.svg";
 import hoverInstagram from "../../assets/Icon/hoverInstagram.svg";
 import hoverFacebook from "../../assets/Icon/hoverFacebook.svg";
 import { useState } from "react";
+import { openWindow } from "../../utils/function/openWindow";
 
 interface hoverState {
   github: boolean;
@@ -47,18 +48,23 @@ const Profile = () => {
           <Image
             src={isOver.github ? hoverGitHub : GitHub}
             alt="icon"
+            onClick={() => openWindow("https://github.com/potatovllage")}
             onMouseEnter={() => setIsOver({ ...isOver, github: true })}
             onMouseLeave={() => setIsOver({ ...isOver, github: false })}
           />
           <Image
             src={isOver.facebook ? hoverFacebook : Facebook}
             alt="icon"
+            onClick={() => openWindow("")}
             onMouseEnter={() => setIsOver({ ...isOver, facebook: true })}
             onMouseLeave={() => setIsOver({ ...isOver, facebook: false })}
           />
           <Image
             src={isOver.instagram ? hoverInstagram : Instargram}
             alt="icon"
+            onClick={() =>
+              openWindow("https://www.instagram.com/yeongjun_333/")
+            }
             onMouseEnter={() => setIsOver({ ...isOver, instagram: true })}
             onMouseLeave={() => setIsOver({ ...isOver, instagram: false })}
           />
