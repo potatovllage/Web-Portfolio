@@ -1,13 +1,35 @@
 import styled from "@emotion/styled";
 import Image from "next/image";
+import { useState } from "react";
+import { openWindow } from "../../utils/function/openWindow";
+
+type NotifyType = "EMAIL" | "PHONE" | "BIRTHDAY" | "LOCATION";
 
 interface Props {
+  type: NotifyType;
   imgURL: string;
   title: string;
   content: string;
 }
 
-const NotifyBox = ({ content, imgURL, title }: Props) => {
+const NotifyBox = ({ type, content, imgURL, title }: Props) => {
+  const [select, setSelect] = useState<boolean>(false);
+
+  const onClickNotify = () => {
+    if (type === "EMAIL") {
+      openWindow("mailto:bluehome8626@naver.com");
+    } else {
+    }
+  };
+
+  const onSelectType = () => {
+    if (type === "EMAIL") {
+      setSelect(true);
+    } else {
+      setSelect(false);
+    }
+  };
+
   return (
     <Wrapper>
       <IconContainer>
@@ -15,7 +37,17 @@ const NotifyBox = ({ content, imgURL, title }: Props) => {
       </IconContainer>
       <ContentContainer>
         <Title>{title}</Title>
-        <Content>{content}</Content>
+        <Content
+          select={select}
+          onMouseEnter={onSelectType}
+          onClick={onClickNotify}
+        >
+          {content.length > 19 ? (
+            <>{content.substring(0, 18)}...</>
+          ) : (
+            <>{content}</>
+          )}
+        </Content>
       </ContentContainer>
     </Wrapper>
   );
@@ -52,11 +84,12 @@ const Title = styled.h1`
   color: #629fd8;
 `;
 
-const Content = styled.p`
+const Content = styled.p<{ select: boolean }>`
   width: 164px;
   font-weight: 400;
   font-size: 16px;
   color: #082642;
+  cursor: ${({ select }) => (select ? "pointer" : "auto")};
 `;
 
 export default NotifyBox;

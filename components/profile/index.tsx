@@ -11,6 +11,7 @@ import Instargram from "../../assets/Icon/Instagram.svg";
 import hoverGitHub from "../../assets/Icon/hoverGitHub.svg";
 import hoverInstagram from "../../assets/Icon/hoverInstagram.svg";
 import hoverFacebook from "../../assets/Icon/hoverFacebook.svg";
+import myPhoto from "../../assets/myPhoto.svg";
 import { useState } from "react";
 import { openWindow } from "../../utils/function/openWindow";
 
@@ -30,20 +31,36 @@ const Profile = () => {
   return (
     <CoverWrapper>
       <Wrapper>
-        <ProfileImg src=";" alt="ProfileImg" />
-        <Name>OOO</Name>
+        <Image width={196} height={196} src={myPhoto} alt="ProfileImg" />
+        <Name>전영준</Name>
         <JobContainer>
-          <p>Backend Developer</p>
+          <p>Frontend Developer</p>
         </JobContainer>
         <HR />
         <NotifyBox
+          type="EMAIL"
           imgURL={mail}
           title="EMAIL"
-          content="leejeongyoon0411@g..."
+          content="bluehome8626@naver.com"
         />
-        <NotifyBox imgURL={phone} title="PHONE" content="000-0000-0000" />
-        <NotifyBox imgURL={calender} title="Birthday" content="0000.00.00" />
-        <NotifyBox imgURL={map} title="Location" content="어디사시나효" />
+        <NotifyBox
+          type="PHONE"
+          imgURL={phone}
+          title="PHONE"
+          content="010-4999-8626"
+        />
+        <NotifyBox
+          type="BIRTHDAY"
+          imgURL={calender}
+          title="Birthday"
+          content="2005.04.10"
+        />
+        <NotifyBox
+          type="LOCATION"
+          imgURL={map}
+          title="Location"
+          content="강원도 정선"
+        />
         <IconContainer>
           <Image
             src={isOver.github ? hoverGitHub : GitHub}
@@ -55,7 +72,7 @@ const Profile = () => {
           <Image
             src={isOver.facebook ? hoverFacebook : Facebook}
             alt="icon"
-            onClick={() => openWindow("")}
+            onClick={() => openWindow("https://www.facebook.com/a")}
             onMouseEnter={() => setIsOver({ ...isOver, facebook: true })}
             onMouseLeave={() => setIsOver({ ...isOver, facebook: false })}
           />
@@ -92,15 +109,10 @@ const Wrapper = styled.div`
   box-shadow: inset 5px 5px 16px rgba(203, 215, 226, 0.8),
     inset -5px -5px 16px #ffffff;
   border-radius: 28px;
-`;
 
-const ProfileImg = styled.img`
-  width: 196px;
-  height: 196px;
-  margin-left: 48px;
-  filter: drop-shadow(3px 3px 8px rgba(203, 215, 226, 0.8))
-    drop-shadow(-3px -3px 8px #ffffff);
-  border-radius: 16px;
+  > img {
+    margin-left: 48px;
+  }
 `;
 
 const Name = styled.p`
