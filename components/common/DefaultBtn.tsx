@@ -1,15 +1,18 @@
-import { InputHTMLAttributes } from "react";
 import styled from "@emotion/styled";
+import React from "react";
+import { useRecoilState } from "recoil";
+import { MenuState } from "../../store/atom";
 
-interface Props extends InputHTMLAttributes<HTMLInputElement> {
-  width?: number;
-  defaultColor?: boolean;
+interface Props {
+  children: React.ReactNode;
 }
 
-const DefaultBtn = ({ type = "button", ...props }: Props) => {
+const DefaultBtn = ({ children }: Props) => {
+  const [btnState, setbtnState] = useRecoilState(MenuState);
+
   return (
     <DefaultContainer>
-      <DefaultBtnBox type={type} {...props} />
+      <DefaultBtnBox state={btnState.stateValue}>{children}</DefaultBtnBox>
     </DefaultContainer>
   );
 };
@@ -25,9 +28,9 @@ const DefaultContainer = styled.div`
   border-radius: 14px;
 `;
 
-const DefaultBtnBox = styled.input<{ width?: number }>`
+const DefaultBtnBox = styled.button<{ state: boolean }>`
   cursor: pointer;
-  width: ${({ width }) => (width ? `${width}px` : `121px`)};
+  width: 121px;
   height: 44px;
   padding: 2px;
   background: #e7edf3;
@@ -37,6 +40,14 @@ const DefaultBtnBox = styled.input<{ width?: number }>`
   color: #377ab9;
   font-size: 16px;
   font-weight: 700;
+  transition: all 0.5s;
+  :hover {
+    transition: all 0.5s;
+    color: #629fd8;
+    background: #f2f6fa;
+    box-shadow: 3px 3px 8px rgba(203, 215, 226, 0.8), -3px -3px 8px #ffffff;
+    border-radius: 16px;
+  }
 `;
 
 export default DefaultBtn;

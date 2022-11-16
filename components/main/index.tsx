@@ -10,7 +10,7 @@ const Main = () => {
     <Wrapper>
       <MenuContainer>
         {BtnData.data.map((data, idx) => (
-          <DefaultBtn value={data.value} />
+          <DefaultBtn>{data.value}</DefaultBtn>
         ))}
       </MenuContainer>
     </Wrapper>
