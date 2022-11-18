@@ -26,41 +26,84 @@ const About = () => {
           <h1>What I'm Doing</h1>
         </DoingTitleContainer>
         <DoingContainer>
-          {/* DoingBox를 복붙해서 사용하면 됩니다. */}
-          <DoingBox>
-            <IconBox>
-              <Image src={whale} alt="icon" />
-            </IconBox>
-            <DoingContent>
-              <h1>Frontend Deverlopment</h1>
-            </DoingContent>
-          </DoingBox>
-          <DoingBox>
-            <IconBox>
-              <Image src={whale} alt="icon" />
-            </IconBox>
-            <DoingContent>
-              <h1>Making</h1>
-            </DoingContent>
-          </DoingBox>
-          <DoingBox>
-            <IconBox>
-              <Image src={whale} alt="icon" />
-            </IconBox>
-            <DoingContent>
-              <h1>Writing</h1>
-            </DoingContent>
-          </DoingBox>
-          <DoingBox>
-            <IconBox>
-              <Image src={whale} alt="icon" />
-            </IconBox>
-            <DoingContent>
-              <h1>Communication</h1>
-            </DoingContent>
-          </DoingBox>
+          <DoingBoxContainer>
+            {/* DoingBox를 복붙해서 사용하면 됩니다. */}
+            <DoingBox>
+              <IconBox>
+                <Image src={whale} alt="icon" />
+              </IconBox>
+              <DoingContent>
+                <h1>Frontend Deverlopment</h1>
+                <p>
+                  처음 코딩은 초6때 스크래치라는 블럭코딩으로 시작하였고
+                  중학교에 올라와서 python을 사용해보다 중3때 html,css를
+                  접하고서 FrontEnd 개발자를 꿈꿨습니다.
+                </p>
+                <p>
+                  그 후 대덕소프트웨어마이스터고등학교에서 재학중이며 Front-End
+                  분야를 공부하고 있습니다. 공부를 최대한 멈추지 않고 늘 열심히
+                  해야 한다고 생각하여 평일 주말 상관 없이 꾸준하게
+                  공부중입니다.
+                </p>
+              </DoingContent>
+            </DoingBox>
+            <DoingBox>
+              <IconBox>
+                <Image src={whale} alt="icon" />
+              </IconBox>
+              <DoingContent>
+                <h1>Making</h1>
+                <p>
+                  만드는 것을 좋아하고 끝까지 놓지 않습니다. 새로운 아이디어나
+                  재밌는 요소가 생각이 나면 머릿속으로 구상 후 코드로 구현하는
+                  것을 좋아합니다. 다만 중간에 하다가 막히면 잠깐 멈칫하고
+                  생각을 오래 하는 경우가 있지만 다시 마음을 잡고 한 번 시도
+                  했던 것을 놓치지 않고 마무리 하고 있습니다.
+                </p>
+              </DoingContent>
+            </DoingBox>
+          </DoingBoxContainer>
+          <DoingBoxContainer>
+            {/* DoingBox를 복붙해서 사용하면 됩니다. */}
+            <DoingBox>
+              <IconBox>
+                <Image src={whale} alt="icon" />
+              </IconBox>
+              <DoingContent>
+                <h1>Writing</h1>
+                <p>
+                  기록을 좋아하고 중요하다고 생각합니다. 기록을 남기는 것은 나
+                  자신을 다시 한 번 성찰 하게 해주어서 좋았던 점과 부족한 점
+                  등을 파악하며 발전하는 계기가 될 수 있는게 아닌가 생각하고
+                  스스로에게 피드백을 하여 계속하여 성장하는 것이 또 하나의
+                  목표입니다.
+                </p>
+              </DoingContent>
+            </DoingBox>
+            <DoingBox>
+              <IconBox>
+                <Image src={whale} alt="icon" />
+              </IconBox>
+              <DoingContent>
+                <h1>Communication</h1>
+                <p>
+                  저는 사람들과 이야기를 잘하고 먼저 잘 다가가는 사람입니다.
+                  처음 어색한 상황이여도 스스럼 없이 먼저 다가가고 소통에도
+                  다툼이나 감정에 휘둘리지 않고 이성적으로 대하는 것 같습니다.
+                  여러 해커톤에 참여 해보면서 커뮤니케이션에 관하여는 저에게
+                  장점이라고 생각하고 있습니다.
+                </p>
+              </DoingContent>
+            </DoingBox>
+          </DoingBoxContainer>
         </DoingContainer>
       </ImDoingContainer>
+      <ProjectOrganization>
+        <ProjectOrgaTitle>
+          <h1>Project Organization</h1>
+        </ProjectOrgaTitle>
+        <OrganizationContainer></OrganizationContainer>
+      </ProjectOrganization>
     </Wrapper>
   );
 };
@@ -137,10 +180,13 @@ const DoingTitleContainer = styled.div`
 `;
 
 const DoingContainer = styled.div`
-  width: 768px;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+`;
+
+const DoingBoxContainer = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
 const DoingBox = styled.div`
@@ -185,6 +231,26 @@ const DoingContent = styled.div`
     color: #222222;
     margin-bottom: 32px;
   }
+`;
+
+const ProjectOrganization = styled.div`
+  margin-bottom: 44px;
+`;
+
+const ProjectOrgaTitle = styled.div`
+  margin-right: 575px;
+  margin-bottom: 24px;
+  h1 {
+    font-weight: 700;
+    font-size: 20px;
+    color: #377ab9;
+  }
+`;
+
+const OrganizationContainer = styled.div`
+  width: 746px;
+  display: flex;
+  flex-wrap: wrap;
 `;
 
 export default About;
