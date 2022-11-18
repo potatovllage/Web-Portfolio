@@ -6,16 +6,18 @@ import { useState } from "react";
 import About from "../about";
 
 const BtnData = {
-  data: [{ value: "About" }, { value: "Resume" }, { value: "Portfolio" }],
+  data: [
+    { value: "About", 0: <About /> },
+    { value: "Resume", 1: "" },
+    { value: "Portfolio", 2: "" },
+  ],
 };
 
 const Main = () => {
-  const [btnState, setbtnState] = useRecoilState(MenuState);
-  const [cur, setCur] = useState<number>();
+  const [btnState, setBtnState] = useState(0);
 
-  const onClickBtn = (num: number, value: string) => {
-    setbtnState({ stateValue: true, typeValue: value });
-    setCur(num);
+  const onClickBtn = (idx: number) => {
+    setBtnState(idx);
   };
 
   return (
@@ -23,8 +25,8 @@ const Main = () => {
       <MenuContainer>
         {BtnData.data.map((data, idx) => (
           <DefaultBtn
-            btnState={(idx + 1) * 10 === cur}
-            onClick={() => onClickBtn((idx + 1) * 10, data.value)}
+            btnState={btnState === idx ? true : false}
+            onClick={() => onClickBtn(idx)}
           >
             {data.value}
           </DefaultBtn>

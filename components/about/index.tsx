@@ -32,18 +32,7 @@ const About = () => {
               <Image src={whale} alt="icon" />
             </IconBox>
             <DoingContent>
-              <h1>Backend Deverlopment</h1>
-              <p>
-                고등학교에 입학해서 처음 코딩이라는 것을 접해보고 Frontend,
-                Embedded 등 여러 가지 분야의 개발을 경험해 봤습니다.
-              </p>
-              <p>
-                여러 가지 분야들 각각의 매력이 있습니다. Frontend처럼 직접 만든
-                페이지를 사용자가 볼 수 있다는 것은 흥미로웠지만 개발하면서
-                비즈니스 로직을 흐름대로 설계한다는 점에서 Backend가 너무
-                매력적으로 보였습니다. 현재 Spring Boot로 서버 개발을 하고
-                있습니다.
-              </p>
+              <h1>Frontend Deverlopment</h1>
             </DoingContent>
           </DoingBox>
           <DoingBox>
@@ -51,18 +40,23 @@ const About = () => {
               <Image src={whale} alt="icon" />
             </IconBox>
             <DoingContent>
-              <h1>Backend Deverlopment</h1>
-              <p>
-                고등학교에 입학해서 처음 코딩이라는 것을 접해보고 Frontend,
-                Embedded 등 여러 가지 분야의 개발을 경험해 봤습니다.
-              </p>
-              <p>
-                여러 가지 분야들 각각의 매력이 있습니다. Frontend처럼 직접 만든
-                페이지를 사용자가 볼 수 있다는 것은 흥미로웠지만 개발하면서
-                비즈니스 로직을 흐름대로 설계한다는 점에서 Backend가 너무
-                매력적으로 보였습니다. 현재 Spring Boot로 서버 개발을 하고
-                있습니다.
-              </p>
+              <h1>Making</h1>
+            </DoingContent>
+          </DoingBox>
+          <DoingBox>
+            <IconBox>
+              <Image src={whale} alt="icon" />
+            </IconBox>
+            <DoingContent>
+              <h1>Writing</h1>
+            </DoingContent>
+          </DoingBox>
+          <DoingBox>
+            <IconBox>
+              <Image src={whale} alt="icon" />
+            </IconBox>
+            <DoingContent>
+              <h1>Communication</h1>
             </DoingContent>
           </DoingBox>
         </DoingContainer>
@@ -152,6 +146,7 @@ const DoingContainer = styled.div`
 const DoingBox = styled.div`
   display: flex;
   width: 370px;
+  margin-bottom: 28px;
   background: #e7edf3;
   box-shadow: 3px 3px 8px rgba(203, 215, 226, 0.8), -3px -3px 8px #ffffff;
   border-radius: 16px;
