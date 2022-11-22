@@ -6,12 +6,13 @@ interface Props {
   imgURL: StaticImageData;
   date: string;
   field: string;
+  onClick: () => void;
 }
 
-const PortfolioBox = ({ field, date, imgURL, title }: Props) => {
+const PortfolioBox = ({ onClick, field, date, imgURL, title }: Props) => {
   console.log(imgURL);
   return (
-    <Wrapper>
+    <Wrapper onClick={onClick}>
       <Image width={338} height={190} src={imgURL} alt="img" />
       <PortfolioTitle>{title}</PortfolioTitle>
       <PortfolioDate>{date}</PortfolioDate>
