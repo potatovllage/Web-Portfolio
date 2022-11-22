@@ -9,6 +9,7 @@ import onRto from "../../assets/onRto.svg";
 import offRto from "../../assets/offRto.svg";
 import onBagger from "../../assets/onBagger.svg";
 import offBagger from "../../assets/offBagger.svg";
+import Whale from "../../assets/Icon/Whale.svg";
 import { useState } from "react";
 import { openWindow } from "../../utils/function/openWindow";
 
@@ -51,7 +52,6 @@ const About = () => {
         </DoingTitleContainer>
         <DoingContainer>
           <DoingBoxContainer>
-            {/* DoingBox를 복붙해서 사용하면 됩니다. */}
             <DoingBox>
               <IconBox>
                 <Image src={whale} alt="icon" />
@@ -187,9 +187,47 @@ const About = () => {
         </AwardTitle>
         <AwardBox>
           <AwardImgWrapper>
-            <Image width={96} height={96} src={whale} alt="" />
+            <Image width={96} height={96} src={Whale} alt="" />
           </AwardImgWrapper>
-          <AwardContentWrapper></AwardContentWrapper>
+          <AwardContentWrapper>
+            <AwardContentTitle>UNITHON 9th</AwardContentTitle>
+            <AwardContentDate>22.09.02 ~ 22.09.04</AwardContentDate>
+            <AwardContentText>
+              유니톤은 IT 커뮤니티 구성원들의 즐거운 성장과 교류를 목표로 하는
+              해커톤입니다. FrontEnd 개발자로 참가하였습니다. 현업 재직자,
+              대학생 분들과 같이 프로젝트를 해본 좋은 경험이였습니다.
+            </AwardContentText>
+          </AwardContentWrapper>
+        </AwardBox>
+        <AwardBox>
+          <AwardImgWrapper>
+            <Image width={96} height={96} src={Whale} alt="" />
+          </AwardImgWrapper>
+          <AwardContentWrapper>
+            <AwardContentTitle>sw마이스터고 연합 해커톤</AwardContentTitle>
+            <AwardContentDate>22.10.05 ~ 22.10.07</AwardContentDate>
+            <AwardContentText>
+              sw마이스터고에서 주관하는 4개교 연합 해커톤에 FrontEnd 개발자로
+              참가하였습니다. 디자이너, 백엔드, AI 팀원 3명과 같이 즐겁게
+              개발하여 수상도 할 수 있었던 것 같습니다.
+            </AwardContentText>
+          </AwardContentWrapper>
+        </AwardBox>
+        <AwardBox>
+          <AwardImgWrapper>
+            <Image width={96} height={96} src={Whale} alt="" />
+          </AwardImgWrapper>
+          <AwardContentWrapper>
+            <AwardContentTitle>
+              제 7회 전국 고등학교 동아리 SW 경진대회
+            </AwardContentTitle>
+            <AwardContentDate>22.08.01 ~ 22.11.12</AwardContentDate>
+            <AwardContentText>
+              SW 중심 대학 4개교와 함깨하는 전국 고등학교 동아리 SW 경진대회에
+              참여하였습니다. 같은 동아리 친구 4명과 함깨하였고 예선 80팀을 뚫고
+              본선 20팀에 뽑혀 장려상을 수상 할 수 있었습니다.
+            </AwardContentText>
+          </AwardContentWrapper>
         </AwardBox>
       </AwardContainer>
     </Wrapper>
@@ -201,6 +239,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   width: 840px;
+  margin-bottom: 120px;
   background: #e7edf3;
   box-shadow: 5px 5px 16px rgba(203, 215, 226, 0.8), -5px -5px 16px #ffffff;
   border-radius: 16px;
@@ -368,7 +407,7 @@ const AwardContainer = styled.div`
 
 const AwardTitle = styled.div`
   margin-right: 712px;
-  margin-bottom: 24px;
+  margin-bottom: 56px;
   > h1 {
     font-weight: 700;
     font-size: 20px;
@@ -377,21 +416,53 @@ const AwardTitle = styled.div`
 `;
 
 const AwardBox = styled.div`
+  display: flex;
   width: 768px;
+  padding: 28px 32px 32px 22px;
   margin-bottom: 60px;
   background: #e7edf3;
   box-shadow: 3px 3px 8px rgba(203, 215, 226, 0.8), -3px -3px 8px #ffffff;
   border-radius: 16px;
+  position: relative;
 `;
 
 const AwardImgWrapper = styled.div`
+  position: absolute;
+  top: -28px;
+  left: 22px;
   width: 100px;
   height: 100px;
+  margin-right: 24px;
   background: #e7edf3;
   box-shadow: 3px 3px 8px rgba(203, 215, 226, 0.8), -3px -3px 8px #ffffff;
   border-radius: 16px;
 `;
 
-const AwardContentWrapper = styled.div``;
+const AwardContentWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding-left: 146px;
+`;
+
+const AwardContentTitle = styled.h1`
+  color: #082642;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 4px;
+`;
+
+const AwardContentDate = styled.p`
+  color: #629fd8;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 8px;
+`;
+
+const AwardContentText = styled.p`
+  color: #222222;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 12px;
+`;
 
 export default About;
