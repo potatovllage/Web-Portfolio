@@ -1,15 +1,16 @@
 import styled from "@emotion/styled";
 import DefaultBtn from "../common/DefaultBtn";
-import { useRecoilState } from "recoil";
 import { useState } from "react";
 import About from "../about";
+import Portfolio from "../portfolio";
 
 const BtnData = {
-  data: [
-    { value: "About", 0: <About /> },
-    { value: "Resume", 1: "" },
-    { value: "Portfolio", 2: "" },
-  ],
+  data: [{ value: "About" }, { value: "Resume" }, { value: "Portfolio" }],
+};
+const tab: any = {
+  0: <About />,
+  1: <></>,
+  2: <Portfolio />,
 };
 
 const Main = () => {
@@ -31,9 +32,7 @@ const Main = () => {
           </DefaultBtn>
         ))}
       </MenuContainer>
-      <MainContainer>
-        <About />
-      </MainContainer>
+      <MainContainer>{tab[btnState]}</MainContainer>
     </Wrapper>
   );
 };
