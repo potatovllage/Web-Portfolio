@@ -1,14 +1,15 @@
 import styled from "@emotion/styled";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 interface Props {
   title: string;
-  imgURL: string;
+  imgURL: StaticImageData;
   date: string;
   field: string;
 }
 
 const PortfolioBox = ({ field, date, imgURL, title }: Props) => {
+  console.log(imgURL);
   return (
     <Wrapper>
       <Image width={338} height={190} src={imgURL} alt="img" />
@@ -22,6 +23,7 @@ const PortfolioBox = ({ field, date, imgURL, title }: Props) => {
 const Wrapper = styled.div`
   width: 370px;
   height: 320px;
+  cursor: pointer;
   padding: 16px 16px 24px 16px;
   border-radius: 16px;
   background: #e7edf3;
@@ -39,13 +41,14 @@ const PortfolioTitle = styled.h1`
   color: #082642;
   font-weight: 700;
   font-size: 18px;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 `;
 
 const PortfolioDate = styled.p`
   color: #629fd8;
   font-weight: 400;
   font-size: 16px;
+  margin-bottom: 8px;
 `;
 
 const PortfolioField = styled.p`

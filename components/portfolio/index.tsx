@@ -16,9 +16,9 @@ const Portfolio = () => {
       </TitleWrapper>
       <PortfolioContainer>
         <PortfolioBox
+          imgURL={Moiza}
           date="21.10.01 ~ ing"
           field="FrontEnd"
-          imgURL={Moiza}
           title="MOIZA"
         />
         <PortfolioBox
@@ -35,8 +35,8 @@ const Portfolio = () => {
         />
         <PortfolioBox
           date="22.10.05 ~ 22.10.07"
-          field={Rto}
-          imgURL="FrontEnd"
+          field="FrontEnd"
+          imgURL={Rto}
           title="알투"
         />
       </PortfolioContainer>

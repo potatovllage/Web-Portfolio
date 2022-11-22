@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
 import { openWindow } from "../../utils/function/openWindow";
 
@@ -7,7 +7,7 @@ type NotifyType = "EMAIL" | "PHONE" | "BIRTHDAY" | "LOCATION";
 
 interface Props {
   type: NotifyType;
-  imgURL: string;
+  imgURL: StaticImageData;
   title: string;
   content: string;
 }
