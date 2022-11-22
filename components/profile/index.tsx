@@ -6,25 +6,25 @@ import phone from "../../assets/Icon/phone.svg";
 import calender from "../../assets/Icon/calender.svg";
 import map from "../../assets/Icon/map.svg";
 import GitHub from "../../assets/Icon/GitHub.svg";
-import Facebook from "../../assets/Icon/Facebook.svg";
 import Instargram from "../../assets/Icon/Instagram.svg";
 import hoverGitHub from "../../assets/Icon/hoverGitHub.svg";
 import hoverInstagram from "../../assets/Icon/hoverInstagram.svg";
-import hoverFacebook from "../../assets/Icon/hoverFacebook.svg";
+import Linkedin from "../../assets/Icon/Linkedin.svg";
+import hoverLinkedin from "../../assets/Icon/hoverLinkedin.svg";
 import myPhoto from "../../assets/myPhoto.svg";
 import { useState } from "react";
 import { openWindow } from "../../utils/function/openWindow";
 
 interface hoverState {
   github: boolean;
-  facebook: boolean;
+  Linkedin: boolean;
   instagram: boolean;
 }
 
 const Profile = () => {
   const [isOver, setIsOver] = useState<hoverState>({
     github: false,
-    facebook: false,
+    Linkedin: false,
     instagram: false,
   });
 
@@ -70,11 +70,13 @@ const Profile = () => {
             onMouseLeave={() => setIsOver({ ...isOver, github: false })}
           />
           <Image
-            src={isOver.facebook ? hoverFacebook : Facebook}
+            src={isOver.Linkedin ? hoverLinkedin : Linkedin}
             alt="icon"
-            onClick={() => openWindow("https://www.facebook.com/a")}
-            onMouseEnter={() => setIsOver({ ...isOver, facebook: true })}
-            onMouseLeave={() => setIsOver({ ...isOver, facebook: false })}
+            onClick={() =>
+              openWindow("https://www.linkedin.com/in/영준-전-559058231/")
+            }
+            onMouseEnter={() => setIsOver({ ...isOver, Linkedin: true })}
+            onMouseLeave={() => setIsOver({ ...isOver, Linkedin: false })}
           />
           <Image
             src={isOver.instagram ? hoverInstagram : Instargram}

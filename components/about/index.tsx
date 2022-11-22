@@ -185,7 +185,12 @@ const About = () => {
         <AwardTitle>
           <h1>Award</h1>
         </AwardTitle>
-        <AwardBox>a</AwardBox>
+        <AwardBox>
+          <AwardImgWrapper>
+            <Image width={96} height={96} src={whale} alt="" />
+          </AwardImgWrapper>
+          <AwardContentWrapper></AwardContentWrapper>
+        </AwardBox>
       </AwardContainer>
     </Wrapper>
   );
@@ -378,5 +383,15 @@ const AwardBox = styled.div`
   box-shadow: 3px 3px 8px rgba(203, 215, 226, 0.8), -3px -3px 8px #ffffff;
   border-radius: 16px;
 `;
+
+const AwardImgWrapper = styled.div`
+  width: 100px;
+  height: 100px;
+  background: #e7edf3;
+  box-shadow: 3px 3px 8px rgba(203, 215, 226, 0.8), -3px -3px 8px #ffffff;
+  border-radius: 16px;
+`;
+
+const AwardContentWrapper = styled.div``;
 
 export default About;
