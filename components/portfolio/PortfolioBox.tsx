@@ -10,10 +10,11 @@ interface Props {
 }
 
 const PortfolioBox = ({ onClick, field, date, imgURL, title }: Props) => {
-  console.log(imgURL);
   return (
     <Wrapper onClick={onClick}>
-      <Image width={338} height={190} src={imgURL} alt="img" />
+      <ImgWrapper>
+        <Image width={338} height={190} src={imgURL} alt="img" />
+      </ImgWrapper>
       <PortfolioTitle>{title}</PortfolioTitle>
       <PortfolioDate>{date}</PortfolioDate>
       <PortfolioField>{field}</PortfolioField>
@@ -31,11 +32,40 @@ const Wrapper = styled.div`
   box-shadow: 3px 3px 8px rgba(203, 215, 226, 0.8), -3px -3px 8px #ffffff;
   border-radius: 16px;
 
+  :hover {
+    background: #f2f6fa;
+    box-shadow: inset 3px 3px 8px rgba(203, 215, 226, 0.8),
+      inset -3px -3px 8px #ffffff;
+    border-radius: 16px;
+
+    > h1 {
+      background: #f2f6fa;
+      text-decoration: underline;
+    }
+
+    > p {
+      background: #f2f6fa;
+    }
+
+    > div {
+      > img {
+        transform: scale(1.1);
+        transition: transform 1s;
+        filter: opacity(0.6) drop-shadow(0 0 0 #082642);
+      }
+    }
+  }
+
   > img {
     filter: drop-shadow(3px 3px 8px rgba(203, 215, 226, 0.8))
       drop-shadow(-3px -3px 8px #ffffff);
     margin-bottom: 20px;
   }
+`;
+
+const ImgWrapper = styled.div`
+  overflow: hidden;
+  margin-bottom: 20px;
 `;
 
 const PortfolioTitle = styled.h1`
