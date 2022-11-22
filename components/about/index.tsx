@@ -1,8 +1,32 @@
 import styled from "@emotion/styled";
 import Image from "next/image";
 import whale from "../../assets/Icon/Whale.svg";
+import onMoiza from "../../assets/onMoiza.svg";
+import offMoiza from "../../assets/offMoiza.svg";
+import onWalkHub from "../../assets/onWalkhub.svg";
+import offWalkHub from "../../assets/offWalkhub.svg";
+import onRto from "../../assets/onRto.svg";
+import offRto from "../../assets/offRto.svg";
+import onBagger from "../../assets/onBagger.svg";
+import offBagger from "../../assets/offBagger.svg";
+import { useState } from "react";
+import { openWindow } from "../../utils/function/openWindow";
+
+interface hoverState {
+  moiza: boolean;
+  walkhub: boolean;
+  Rto: boolean;
+  bagger: boolean;
+}
 
 const About = () => {
+  const [imgState, setImgState] = useState<hoverState>({
+    moiza: false,
+    walkhub: false,
+    Rto: false,
+    bagger: false,
+  });
+
   return (
     <Wrapper>
       <TitleWrapper>
@@ -102,8 +126,67 @@ const About = () => {
         <ProjectOrgaTitle>
           <h1>Project Organization</h1>
         </ProjectOrgaTitle>
-        <OrganizationContainer></OrganizationContainer>
+        <OrganizationContainer>
+          <OrganizationImgCover>
+            <Image
+              width={156}
+              height={156}
+              src={imgState.moiza ? offMoiza : onMoiza}
+              onClick={() =>
+                openWindow(
+                  "https://github.com/Software-Meister-High-School-Community"
+                )
+              }
+              onMouseEnter={() => setImgState({ ...imgState, moiza: true })}
+              onMouseLeave={() => setImgState({ ...imgState, moiza: false })}
+              alt="icon"
+            />
+          </OrganizationImgCover>
+          <OrganizationImgCover>
+            <Image
+              width={156}
+              height={156}
+              src={imgState.walkhub ? offWalkHub : onWalkHub}
+              onClick={() => openWindow("https://github.com/Walkhub")}
+              onMouseEnter={() => setImgState({ ...imgState, walkhub: true })}
+              onMouseLeave={() => setImgState({ ...imgState, walkhub: false })}
+              alt="icon"
+            />
+          </OrganizationImgCover>
+          <OrganizationImgCover>
+            <Image
+              width={156}
+              height={156}
+              src={imgState.Rto ? offRto : onRto}
+              onClick={() =>
+                openWindow(
+                  "https://github.com/Software-High-School-United-Hackathon"
+                )
+              }
+              onMouseEnter={() => setImgState({ ...imgState, Rto: true })}
+              onMouseLeave={() => setImgState({ ...imgState, Rto: false })}
+              alt="icon"
+            />
+          </OrganizationImgCover>
+          <OrganizationImgCover>
+            <Image
+              width={156}
+              height={156}
+              src={imgState.bagger ? offBagger : onBagger}
+              onClick={() => openWindow("https://github.com/unithon-9th-10th")}
+              onMouseEnter={() => setImgState({ ...imgState, bagger: true })}
+              onMouseLeave={() => setImgState({ ...imgState, bagger: false })}
+              alt="icon"
+            />
+          </OrganizationImgCover>
+        </OrganizationContainer>
       </ProjectOrganization>
+      <AwardContainer>
+        <AwardTitle>
+          <h1>Award</h1>
+        </AwardTitle>
+        <AwardBox>a</AwardBox>
+      </AwardContainer>
     </Wrapper>
   );
 };
@@ -235,10 +318,11 @@ const DoingContent = styled.div`
 
 const ProjectOrganization = styled.div`
   margin-bottom: 44px;
+  margin-right: 20px;
 `;
 
 const ProjectOrgaTitle = styled.div`
-  margin-right: 575px;
+  width: 195px;
   margin-bottom: 24px;
   h1 {
     font-weight: 700;
@@ -248,9 +332,51 @@ const ProjectOrgaTitle = styled.div`
 `;
 
 const OrganizationContainer = styled.div`
-  width: 746px;
+  width: 724px;
+  margin-left: 24px;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
+`;
+
+const OrganizationImgCover = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 160px;
+  margin-right: 18px;
+  background: #d9d9d9;
+  border-radius: 30px;
+  background: #e7edf3;
+  box-shadow: 3px 3px 8px rgba(203, 215, 226, 0.8), -3px -3px 8px #ffffff;
+  > img {
+    border-radius: 30px;
+    cursor: pointer;
+  }
+`;
+
+const AwardContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const AwardTitle = styled.div`
+  margin-right: 712px;
+  margin-bottom: 24px;
+  > h1 {
+    font-weight: 700;
+    font-size: 20px;
+    color: #377ab9;
+  }
+`;
+
+const AwardBox = styled.div`
+  width: 768px;
+  margin-bottom: 60px;
+  background: #e7edf3;
+  box-shadow: 3px 3px 8px rgba(203, 215, 226, 0.8), -3px -3px 8px #ffffff;
+  border-radius: 16px;
 `;
 
 export default About;

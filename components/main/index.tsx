@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
 import DefaultBtn from "../common/DefaultBtn";
 import { useRecoilState } from "recoil";
-import { MenuState } from "../../store/atom";
 import { useState } from "react";
 import About from "../about";
 
