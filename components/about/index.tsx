@@ -52,6 +52,7 @@ const About = () => {
         </DoingTitleContainer>
         <DoingContainer>
           <DoingBoxContainer>
+            {/* DoingBox를 복붙하여서 내용을 채워 넣어서 사용하면 된다. */}
             <DoingBox>
               <IconBox>
                 <Image src={whale} alt="icon" />
@@ -88,7 +89,7 @@ const About = () => {
             </DoingBox>
           </DoingBoxContainer>
           <DoingBoxContainer>
-            {/* DoingBox를 복붙해서 사용하면 됩니다. */}
+            {/* DoingBox를 복붙하여서 내용을 채워 넣어서 사용하면 된다. */}
             <DoingBox>
               <IconBox>
                 <Image src={whale} alt="icon" />
@@ -127,6 +128,7 @@ const About = () => {
           <h1>Project Organization</h1>
         </ProjectOrgaTitle>
         <OrganizationContainer>
+          {/* OrganizationCover를 복붙하여 Img에 src와 openWindow에 링크를 입력한다. */}
           <OrganizationImgCover>
             <Image
               width={156}
@@ -185,6 +187,7 @@ const About = () => {
         <AwardTitle>
           <h1>Award</h1>
         </AwardTitle>
+        {/* AwardBox를 복붙하여 사용하고 내용을 채워 넣으면 된다. */}
         <AwardBox>
           <AwardImgWrapper>
             <Image width={96} height={96} src={Whale} alt="" />
