@@ -3,13 +3,14 @@ import DefaultBtn from "../common/DefaultBtn";
 import { useState } from "react";
 import About from "../about";
 import Portfolio from "../portfolio";
+import Resume from "../resume";
 
 const BtnData = {
   data: [{ value: "About" }, { value: "Resume" }, { value: "Portfolio" }],
 };
 const tab: any = {
   0: <About />,
-  1: <></>,
+  1: <Resume />,
   2: <Portfolio />,
 };
 
