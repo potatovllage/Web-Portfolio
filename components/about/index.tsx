@@ -166,7 +166,7 @@ const About = () => {
             <Image width={96} height={96} src={Whale} alt="" />
           </AwardImgWrapper>
           <AwardContentWrapper>
-            <AwardContentTitle>UNITHON 9th</AwardContentTitle>
+            <AwardContentTitle>UNITHON 9th 특별상</AwardContentTitle>
             <AwardContentDate>22.09.02 ~ 22.09.04</AwardContentDate>
             <AwardContentText>
               유니톤은 IT 커뮤니티 구성원들의 즐거운 성장과 교류를 목표로 하는
@@ -180,7 +180,9 @@ const About = () => {
             <Image width={96} height={96} src={Whale} alt="" />
           </AwardImgWrapper>
           <AwardContentWrapper>
-            <AwardContentTitle>sw마이스터고 연합 해커톤</AwardContentTitle>
+            <AwardContentTitle>
+              sw마이스터고 연합 해커톤 인기상
+            </AwardContentTitle>
             <AwardContentDate>22.10.05 ~ 22.10.07</AwardContentDate>
             <AwardContentText>
               sw마이스터고에서 주관하는 4개교 연합 해커톤에 FrontEnd 개발자로
@@ -195,7 +197,7 @@ const About = () => {
           </AwardImgWrapper>
           <AwardContentWrapper>
             <AwardContentTitle>
-              제 7회 전국 고등학교 동아리 SW 경진대회
+              제 7회 전국 고등학교 동아리 SW 경진대회 장려상
             </AwardContentTitle>
             <AwardContentDate>22.08.01 ~ 22.11.12</AwardContentDate>
             <AwardContentText>
@@ -410,6 +412,9 @@ const AwardBox = styled.div`
 
 const AwardImgWrapper = styled.div`
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: -28px;
   left: 22px;
   width: 100px;
@@ -418,6 +423,10 @@ const AwardImgWrapper = styled.div`
   background: #e7edf3;
   box-shadow: 3px 3px 8px rgba(203, 215, 226, 0.8), -3px -3px 8px #ffffff;
   border-radius: 16px;
+
+  > img {
+    border-radius: 16px;
+  }
 `;
 
 const AwardContentWrapper = styled.div`
