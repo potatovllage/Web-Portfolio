@@ -39,25 +39,25 @@ const Profile = () => {
         <HR />
         <NotifyBox
           type="EMAIL"
-          imgURL={mail}
+          img={mail}
           title="EMAIL"
           content="bluehome8626@naver.com"
         />
         <NotifyBox
           type="PHONE"
-          imgURL={phone}
+          img={phone}
           title="PHONE"
           content="010-4999-8626"
         />
         <NotifyBox
           type="BIRTHDAY"
-          imgURL={calender}
+          img={calender}
           title="Birthday"
           content="2005.04.10"
         />
         <NotifyBox
           type="LOCATION"
-          imgURL={map}
+          img={map}
           title="Location"
           content="강원도 정선"
         />

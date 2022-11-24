@@ -22,7 +22,7 @@ const Portfolio = () => {
               "https://github.com/Software-Meister-High-School-Community/MOIZA-Front-V1"
             );
           }}
-          imgURL={Moiza}
+          img={Moiza}
           date="21.10.01 ~ ing"
           field="FrontEnd"
           title="MOIZA"
@@ -33,7 +33,7 @@ const Portfolio = () => {
           }}
           date="21.12.28 ~ 22.07.10"
           field="FrontEnd"
-          imgURL={WalkHub}
+          img={WalkHub}
           title="WalkHub"
         />
         <PortfolioBox
@@ -42,7 +42,7 @@ const Portfolio = () => {
           }}
           date="22.09.02 ~ 22.09.04"
           field="FrontEnd"
-          imgURL={Beggar}
+          img={Beggar}
           title="무소비 챌린지(도전 상거지)"
         />
         <PortfolioBox
@@ -53,7 +53,7 @@ const Portfolio = () => {
           }}
           date="22.10.05 ~ 22.10.07"
           field="FrontEnd"
-          imgURL={Rto}
+          img={Rto}
           title="알투"
         />
       </PortfolioContainer>

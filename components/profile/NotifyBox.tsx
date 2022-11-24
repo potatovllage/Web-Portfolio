@@ -7,12 +7,12 @@ type NotifyType = "EMAIL" | "PHONE" | "BIRTHDAY" | "LOCATION";
 
 interface Props {
   type: NotifyType;
-  imgURL: StaticImageData;
+  img: StaticImageData;
   title: string;
   content: string;
 }
 
-const NotifyBox = ({ type, content, imgURL, title }: Props) => {
+const NotifyBox = ({ type, content, img, title }: Props) => {
   const [select, setSelect] = useState<boolean>(false);
 
   const onClickNotify = () => {
@@ -33,7 +33,7 @@ const NotifyBox = ({ type, content, imgURL, title }: Props) => {
   return (
     <Wrapper>
       <IconContainer>
-        <Image width={32} height={32} src={imgURL} alt="icon" />
+        <Image width={32} height={32} src={img} alt="icon" />
       </IconContainer>
       <ContentContainer>
         <Title>{title}</Title>

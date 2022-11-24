@@ -3,17 +3,17 @@ import Image, { StaticImageData } from "next/image";
 
 interface Props {
   title: string;
-  imgURL: StaticImageData;
+  img: StaticImageData;
   date: string;
   field: string;
   onClick: () => void;
 }
 
-const PortfolioBox = ({ onClick, field, date, imgURL, title }: Props) => {
+const PortfolioBox = ({ onClick, field, date, img, title }: Props) => {
   return (
     <Wrapper onClick={onClick}>
       <ImgWrapper>
-        <Image width={338} height={190} src={imgURL} alt="img" />
+        <Image width={338} height={190} src={img} alt="img" />
       </ImgWrapper>
       <PortfolioTitle>{title}</PortfolioTitle>
       <PortfolioDate>{date}</PortfolioDate>
