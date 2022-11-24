@@ -232,7 +232,6 @@ const TitleWrapper = styled.div`
 
 const Title = styled.div`
   display: flex;
-  justify-content: center;
   align-items: center;
   width: 240px;
   height: 80px;
@@ -248,6 +247,7 @@ const Title = styled.div`
   }
 
   > p {
+    margin-left: 34px;
     margin-right: 6px;
     margin-bottom: 4px;
     font-size: 26px;
