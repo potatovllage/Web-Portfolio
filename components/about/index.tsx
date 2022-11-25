@@ -27,19 +27,20 @@ const About = () => {
           think it's late I like to communicate without stopping challenges!
         </p>
       </IntroContainer>
-      <ImDoingContainer>
-        <DoingTitleContainer>
+      <ImDoingWrapper>
+        <ImDoingTitle>
           <h1>What I'm Doing</h1>
-        </DoingTitleContainer>
-        <DoingContainer>
-          <DoingBoxContainer>
-            {/* DoingBox를 복붙하여서 내용을 채워 넣어서 사용하면 된다. */}
-            <DoingBox>
+        </ImDoingTitle>
+        <ImDoingContainer>
+          {/*왼쪽 */}
+          <ImDoingBoxContainer>
+            {/*  DoingBox를 복붙하여서 내용을 채워 넣어서 사용하면 된다. */}
+            <ImDoingBox>
               <IconBox>
                 <Image src={whale} alt="icon" />
               </IconBox>
-              <DoingContent>
-                <h1>Frontend Deverlopment</h1>
+              <ImDoingContent>
+                <h1>FrontEnd Developer</h1>
                 <p>
                   처음 코딩은 초6때 스크래치라는 블럭코딩으로 시작하였고
                   중학교에 올라와서 python을 사용해보다 중3때 html,css를
@@ -51,13 +52,13 @@ const About = () => {
                   해야 한다고 생각하여 평일 주말 상관 없이 꾸준하게
                   공부중입니다.
                 </p>
-              </DoingContent>
-            </DoingBox>
-            <DoingBox>
+              </ImDoingContent>
+            </ImDoingBox>
+            <ImDoingBox>
               <IconBox>
                 <Image src={whale} alt="icon" />
               </IconBox>
-              <DoingContent>
+              <ImDoingContent>
                 <h1>Making</h1>
                 <p>
                   만드는 것을 좋아하고 끝까지 놓지 않습니다. 새로운 아이디어나
@@ -66,16 +67,17 @@ const About = () => {
                   생각을 오래 하는 경우가 있지만 다시 마음을 잡고 한 번 시도
                   했던 것을 놓치지 않고 마무리 하고 있습니다.
                 </p>
-              </DoingContent>
-            </DoingBox>
-          </DoingBoxContainer>
-          <DoingBoxContainer>
+              </ImDoingContent>
+            </ImDoingBox>
+          </ImDoingBoxContainer>
+          {/*오른쪽 */}
+          <ImDoingBoxContainer>
             {/* DoingBox를 복붙하여서 내용을 채워 넣어서 사용하면 된다. */}
-            <DoingBox>
+            <ImDoingBox>
               <IconBox>
                 <Image src={whale} alt="icon" />
               </IconBox>
-              <DoingContent>
+              <ImDoingContent>
                 <h1>Writing</h1>
                 <p>
                   기록을 좋아하고 중요하다고 생각합니다. 기록을 남기는 것은 나
@@ -84,13 +86,13 @@ const About = () => {
                   스스로에게 피드백을 하여 계속하여 성장하는 것이 또 하나의
                   목표입니다.
                 </p>
-              </DoingContent>
-            </DoingBox>
-            <DoingBox>
+              </ImDoingContent>
+            </ImDoingBox>
+            <ImDoingBox>
               <IconBox>
                 <Image src={whale} alt="icon" />
               </IconBox>
-              <DoingContent>
+              <ImDoingContent>
                 <h1>Communication</h1>
                 <p>
                   저는 사람들과 이야기를 잘하고 먼저 잘 다가가는 사람입니다.
@@ -99,17 +101,17 @@ const About = () => {
                   여러 해커톤에 참여 해보면서 커뮤니케이션에 관하여는 저에게
                   장점이라고 생각하고 있습니다.
                 </p>
-              </DoingContent>
-            </DoingBox>
-          </DoingBoxContainer>
-        </DoingContainer>
-      </ImDoingContainer>
+              </ImDoingContent>
+            </ImDoingBox>
+          </ImDoingBoxContainer>
+        </ImDoingContainer>
+      </ImDoingWrapper>
       <ProjectOrganization>
         <ProjectOrgaTitle>
           <h1>Project Organization</h1>
         </ProjectOrgaTitle>
         <OrganizationContainer>
-          {/* OrganizationCover를 복붙하여 Img에 src와 openWindow에 링크를 입력한다. */}
+          {/* OrganizationCover를 복붙하여 Img에 src에는 img openWindow에는 링크를 입력한다. */}
           <OrganizationImgCover>
             <Image
               width={156}
@@ -160,7 +162,7 @@ const About = () => {
         <AwardTitle>
           <h1>Award</h1>
         </AwardTitle>
-        {/* AwardBox를 복붙하여 사용하고 내용을 채워 넣으면 된다. */}
+        {/* AwardBox를 복붙하여 사용하고 내용을 채워 넣으면 된다. AwardContentText는 문단을 나눌시 추가하여 글을 쓰면 된다.  */}
         <AwardBox>
           <AwardImgWrapper>
             <Image width={96} height={96} src={medal} alt="" />
@@ -269,12 +271,12 @@ const IntroContainer = styled.div`
   }
 `;
 
-const ImDoingContainer = styled.div`
+const ImDoingWrapper = styled.div`
   margin-top: 14px;
   margin-bottom: 28px;
 `;
 
-const DoingTitleContainer = styled.div`
+const ImDoingTitle = styled.div`
   margin-right: 630px;
   margin-bottom: 24px;
   > h1 {
@@ -284,17 +286,17 @@ const DoingTitleContainer = styled.div`
   }
 `;
 
-const DoingContainer = styled.div`
+const ImDoingContainer = styled.div`
   display: flex;
   justify-content: space-between;
 `;
 
-const DoingBoxContainer = styled.div`
+const ImDoingBoxContainer = styled.div`
   display: flex;
   flex-direction: column;
 `;
 
-const DoingBox = styled.div`
+const ImDoingBox = styled.div`
   display: flex;
   width: 370px;
   margin-bottom: 28px;
@@ -318,7 +320,7 @@ const IconBox = styled.div`
   border-radius: 14px 0px 16px;
 `;
 
-const DoingContent = styled.div`
+const ImDoingContent = styled.div`
   margin-top: 28px;
   margin-right: 28px;
   width: 256px;
