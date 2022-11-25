@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import SkillBox from "./SkillsBox";
+import Whale from "../../assets/Icon/Whale.svg";
 
 const Resume = () => {
   return (
@@ -60,7 +61,7 @@ const Resume = () => {
         </MySkillTitle>
         <MySkillsContainerCover>
           <MySkillsContainer>
-            <SkillBox />
+            <SkillBox img={Whale} ratio={70} title="React" />
           </MySkillsContainer>
         </MySkillsContainerCover>
       </MySkillsWrapper>
@@ -204,6 +205,7 @@ const MySkillsContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 764px;
+  padding: 22px 46px 26px 26px;
   background: #e7edf3;
   box-shadow: inset 3px 3px 8px rgba(203, 215, 226, 0.8),
     inset -3px -3px 8px #ffffff;
