@@ -7,6 +7,7 @@ import tsImg from "../../assets/skills/ts.svg";
 import reactImg from "../../assets/skills/react.svg";
 import recoilImg from "../../assets/skills/recoil.svg";
 import styledImg from "../../assets/skills/styled.svg";
+import ResumeBox from "./ResumeBox";
 
 const Resume = () => {
   return (
@@ -21,45 +22,27 @@ const Resume = () => {
         <EducationTitle>
           <h1>Education</h1>
         </EducationTitle>
-        {/* EducationContainer 복붙해서 사용하기 */}
-        <EducationContainer>
-          <CircleWrapper>
-            <Circle>
-              <div />
-            </Circle>
-          </CircleWrapper>
-          <ContentWrapper>
-            <ContentTitle>대덕소프트웨어마이스터고등학교</ContentTitle>
-            <ContentDate>2021 - 재학 중</ContentDate>
-            <ContentText>
-              대덕소프트웨어마이스터고등학교는 대전광역시 유성구에 위치한
+        {/* ResumeBox 복붙해서 사용하기 */}
+        <ResumeBox
+          title="대덕소프트웨어마이스터고등학교"
+          date="2021 - 재학 중"
+          content=" 대덕소프트웨어마이스터고등학교는 대전광역시 유성구에 위치한
               마이스터고등학교이다. 소프트웨어 마이스터 고등학교로서 최초로
-              개교한 학교이다.
-            </ContentText>
-          </ContentWrapper>
-        </EducationContainer>
+              개교한 학교이다."
+        />
       </EducationWrapper>
       <ExperienceWrapper>
         <ExperienceTitle>
           <h1>Experience</h1>
         </ExperienceTitle>
-        {/* ExperienceContainer 복붙해서 사용하기 */}
-        <ExperienceContainer>
-          <CircleWrapper>
-            <Circle>
-              <div />
-            </Circle>
-          </CircleWrapper>
-          <ContentWrapper>
-            <ContentTitle>대덕소프트웨어마이스터고등학교</ContentTitle>
-            <ContentDate>2021 - 재학 중</ContentDate>
-            <ContentText>
-              대덕소프트웨어마이스터고등학교는 대전광역시 유성구에 위치한
+        {/* ResumeBox 복붙해서 사용하기 */}
+        <ResumeBox
+          title="대덕소프트웨어마이스터고등학교"
+          date="2021 - 재학 중"
+          content=" 대덕소프트웨어마이스터고등학교는 대전광역시 유성구에 위치한
               마이스터고등학교이다. 소프트웨어 마이스터 고등학교로서 최초로
-              개교한 학교이다.
-            </ContentText>
-          </ContentWrapper>
-        </ExperienceContainer>
+              개교한 학교이다."
+        />
       </ExperienceWrapper>
       <MySkillsWrapper>
         <MySkillTitle>
@@ -150,33 +133,6 @@ const EducationTitle = styled.div`
   }
 `;
 
-const EducationContainer = styled.div`
-  display: flex;
-`;
-
-const CircleWrapper = styled.div``;
-
-const Circle = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 24px;
-  height: 24px;
-  margin-right: 24px;
-  border-radius: 100%;
-  background: #f2f6fa;
-  box-shadow: 2px 2px 2px rgba(203, 215, 226, 0.8), -2px -2px 2px #ffffff;
-
-  > div {
-    width: 16px;
-    height: 16px;
-    border-radius: 100%;
-    background: #e7edf3;
-    box-shadow: inset 2px 2px 2px rgba(203, 215, 226, 0.8),
-      inset -2px -2px 2px #ffffff;
-  }
-`;
-
 const ExperienceWrapper = styled.div``;
 
 const ExperienceTitle = styled.div`
@@ -234,28 +190,6 @@ const MySkillsContainer = styled.div`
 const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
-`;
-
-const ContentTitle = styled.h1`
-  color: #082642;
-  font-weight: 700;
-  font-size: 18px;
-  margin-bottom: 4px;
-`;
-
-const ContentDate = styled.p`
-  color: #629fd8;
-  font-weight: 400;
-  font-size: 16px;
-  margin-bottom: 8px;
-`;
-
-const ContentText = styled.p`
-  width: 560px;
-  color: #222222;
-  font-weight: 400;
-  font-size: 16px;
-  margin-bottom: 28px;
 `;
 
 export default Resume;
