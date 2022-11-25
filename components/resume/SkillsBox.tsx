@@ -5,11 +5,11 @@ import Box from "@mui/material/Box";
 
 interface Props {
   title: string;
-  ratio: number;
+  percentage: number;
   img: StaticImageData;
 }
 
-const SkillBox = ({ title, ratio, img }: Props) => {
+const SkillBox = ({ title, percentage, img }: Props) => {
   return (
     <Wrapper>
       <ImgWrapper>
@@ -18,10 +18,10 @@ const SkillBox = ({ title, ratio, img }: Props) => {
       <ContentWrapper>
         <InfomationWrapper>
           <h1>{title}</h1>
-          <p>{ratio}%</p>
+          <p>{percentage}%</p>
         </InfomationWrapper>
         <Box sx={{ width: 612 }}>
-          <BorderLinearProgress variant="determinate" value={ratio} />
+          <BorderLinearProgress variant="determinate" value={percentage} />
         </Box>
       </ContentWrapper>
     </Wrapper>
@@ -31,6 +31,7 @@ const SkillBox = ({ title, ratio, img }: Props) => {
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
+  margin-bottom: 28px;
 `;
 
 const ImgWrapper = styled.div`

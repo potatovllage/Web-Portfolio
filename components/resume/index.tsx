@@ -1,6 +1,12 @@
 import styled from "@emotion/styled";
 import SkillBox from "./SkillsBox";
-import Whale from "../../assets/Icon/Whale.svg";
+import htmlImg from "../../assets/skills/html.svg";
+import cssImg from "../../assets/skills/css.svg";
+import jsImg from "../../assets/skills/js.svg";
+import tsImg from "../../assets/skills/ts.svg";
+import reactImg from "../../assets/skills/react.svg";
+import recoilImg from "../../assets/skills/recoil.svg";
+import styledImg from "../../assets/skills/styled.svg";
 
 const Resume = () => {
   return (
@@ -61,7 +67,20 @@ const Resume = () => {
         </MySkillTitle>
         <MySkillsContainerCover>
           <MySkillsContainer>
-            <SkillBox img={Whale} ratio={70} title="React" />
+            {/* SkillBox 복붙해서 사용하기  */}
+            <SkillBox img={htmlImg} percentage={80} title="HTML5" />
+            <SkillBox img={cssImg} percentage={80} title="CSS3" />
+            <SkillBox img={jsImg} percentage={70} title="JavaScript" />
+            <SkillBox img={tsImg} percentage={70} title="TypeScript" />
+            <SkillBox img={reactImg} percentage={70} title="React" />
+            <SkillBox img={reactImg} percentage={60} title="Next.js" />
+            <SkillBox
+              img={styledImg}
+              percentage={80}
+              title="Styled-Components & Emotion.js"
+            />
+            <SkillBox img={recoilImg} percentage={60} title="recoil" />
+            <SkillBox img={reactImg} percentage={50} title="Context api" />
           </MySkillsContainer>
         </MySkillsContainerCover>
       </MySkillsWrapper>
@@ -205,7 +224,7 @@ const MySkillsContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 764px;
-  padding: 22px 46px 26px 26px;
+  padding: 22px 46px 0px 26px;
   background: #e7edf3;
   box-shadow: inset 3px 3px 8px rgba(203, 215, 226, 0.8),
     inset -3px -3px 8px #ffffff;

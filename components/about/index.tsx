@@ -1,11 +1,11 @@
 import styled from "@emotion/styled";
 import Image from "next/image";
 import whale from "../../assets/Icon/Whale.svg";
-import onMoiza from "../../assets/onMoiza.svg";
-import onWalkHub from "../../assets/onWalkhub.svg";
-import onRto from "../../assets/onRto.svg";
-import onBagger from "../../assets/onBagger.svg";
-import Whale from "../../assets/Icon/Whale.svg";
+import medal from "../../assets/Icon/medal.svg";
+import onMoiza from "../../assets/organizations/onMoiza.svg";
+import onWalkHub from "../../assets/organizations/onWalkHub.svg";
+import onRto from "../../assets/organizations/onRto.svg";
+import onBagger from "../../assets/organizations/onBagger.svg";
 import { openWindow } from "../../utils/function/openWindow";
 
 const About = () => {
@@ -163,7 +163,7 @@ const About = () => {
         {/* AwardBox를 복붙하여 사용하고 내용을 채워 넣으면 된다. */}
         <AwardBox>
           <AwardImgWrapper>
-            <Image width={96} height={96} src={Whale} alt="" />
+            <Image width={96} height={96} src={medal} alt="" />
           </AwardImgWrapper>
           <AwardContentWrapper>
             <AwardContentTitle>UNITHON 9th 특별상</AwardContentTitle>
@@ -177,7 +177,7 @@ const About = () => {
         </AwardBox>
         <AwardBox>
           <AwardImgWrapper>
-            <Image width={96} height={96} src={Whale} alt="" />
+            <Image width={96} height={96} src={medal} alt="" />
           </AwardImgWrapper>
           <AwardContentWrapper>
             <AwardContentTitle>
@@ -193,7 +193,7 @@ const About = () => {
         </AwardBox>
         <AwardBox>
           <AwardImgWrapper>
-            <Image width={96} height={96} src={Whale} alt="" />
+            <Image width={96} height={96} src={medal} alt="" />
           </AwardImgWrapper>
           <AwardContentWrapper>
             <AwardContentTitle>
