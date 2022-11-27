@@ -15,7 +15,7 @@ const UpButton = () => {
 const UpButtonCover = styled.div`
   position: fixed;
   right: 80px;
-  bottom: 40px;
+  bottom: 120px;
   margin-left: 40px;
   :active {
     width: 60px;
