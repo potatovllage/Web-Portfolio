@@ -1,14 +1,26 @@
 import Profile from "../components/profile";
-import FlexWrapper from "../components/common/FlexWrapper";
+import styled from "@emotion/styled";
 import Main from "../components/main";
-import UpButton from "../components/common/UpButton";
+
+const FlexWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 64px;
+  height: fit-content;
+`;
+
+const ProfileContainer = styled.div`
+  width: 344px;
+  padding-bottom: 300px;
+`;
 
 export default function Home() {
   return (
     <FlexWrapper>
-      <Profile />
+      <ProfileContainer>
+        <Profile />
+      </ProfileContainer>
       <Main />
-      <UpButton />
     </FlexWrapper>
   );
 }

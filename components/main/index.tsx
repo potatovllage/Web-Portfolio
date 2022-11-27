@@ -4,6 +4,7 @@ import { useState } from "react";
 import About from "../about";
 import Portfolio from "../portfolio";
 import Resume from "../resume";
+import UpButton from "../common/UpButton";
 
 const BtnData = {
   data: [{ value: "About" }, { value: "Resume" }, { value: "Portfolio" }],
@@ -34,6 +35,7 @@ const Main = () => {
         ))}
       </MenuContainer>
       <MainContainer>{tab[btnState]}</MainContainer>
+      <UpButton />
     </Wrapper>
   );
 };
