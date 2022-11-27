@@ -14,24 +14,13 @@ const ProfileContainer = styled.div`
   padding-bottom: 300px;
 `;
 
-const Focus = styled.div`
-  border: 1px solid black;
-  width: 100vw;
-  position: absolute;
-  top: 0;
-  left: 0;
-`;
-
 export default function Home() {
   return (
-    <>
-      <Focus id="focus" />
-      <FlexWrapper>
-        <ProfileContainer>
-          <Profile />
-        </ProfileContainer>
-        <Main />
-      </FlexWrapper>
-    </>
+    <FlexWrapper>
+      <ProfileContainer>
+        <Profile />
+      </ProfileContainer>
+      <Main />
+    </FlexWrapper>
   );
 }
