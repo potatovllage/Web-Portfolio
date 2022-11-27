@@ -1,23 +1,8 @@
 import styled from "@emotion/styled";
 import up from "../../assets/Icon/up.svg";
 import Image from "next/image";
-import { useState, useEffect } from "react";
 
 const UpButton = () => {
-  const [toggleBtn, setToggleBtn] = useState(true);
-
-  const handleScroll = () => {
-    const { scrollY } = window;
-    scrollY > 200 ? setToggleBtn(true) : setToggleBtn(false);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   const goToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
