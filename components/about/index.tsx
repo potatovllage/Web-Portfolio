@@ -3,7 +3,7 @@ import Image from "next/image";
 import whale from "../../assets/Icon/Whale.svg";
 import medal from "../../assets/Icon/medal.svg";
 import onMoiza from "../../assets/organizations/onMoiza.svg";
-import onWalkHub from "../../assets/organizations/onWalkHub.svg";
+import onWalkHub from "../../assets/organizations/onWalkhub.svg";
 import onRto from "../../assets/organizations/onRto.svg";
 import onBagger from "../../assets/organizations/onBagger.svg";
 import { openWindow } from "../../utils/function/openWindow";
