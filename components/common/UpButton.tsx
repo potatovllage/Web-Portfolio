@@ -5,9 +5,11 @@ import Image from "next/image";
 const UpButton = () => {
   return (
     <UpButtonCover>
-      <UpButtonWrapper>
-        <Image src={up} alt="up" />
-      </UpButtonWrapper>
+      <a href="#focus">
+        <UpButtonWrapper>
+          <Image src={up} alt="up" />
+        </UpButtonWrapper>
+      </a>
     </UpButtonCover>
   );
 };
