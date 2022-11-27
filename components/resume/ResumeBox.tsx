@@ -4,14 +4,18 @@ interface Props {
   title: string;
   date: string;
   content: string;
+  isLast?: boolean;
 }
 
-const ResumeBox = ({ content, date, title }: Props) => {
+const ResumeBox = ({ content, date, title, isLast = false }: Props) => {
   return (
     <Wrapper>
-      <CircleWrapper>
-        <div className="circle" />
-      </CircleWrapper>
+      <ShapesWrapper>
+        <CircleWrapper>
+          <div className="circle" />
+        </CircleWrapper>
+        <HR style={{ opacity: isLast ? 0 : 1 }} />
+      </ShapesWrapper>
       <ContentWrapper>
         <ContentTitle>{title}</ContentTitle>
         <ContentDate>{date}</ContentDate>
@@ -25,13 +29,20 @@ const Wrapper = styled.div`
   display: flex;
 `;
 
+const ShapesWrapper = styled.div`
+  margin-right: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
 const CircleWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   width: 24px;
   height: 24px;
-  margin-right: 24px;
   border-radius: 100%;
   background: #f2f6fa;
   box-shadow: 2px 2px 2px rgba(203, 215, 226, 0.8), -2px -2px 2px #ffffff;
@@ -44,6 +55,15 @@ const CircleWrapper = styled.div`
     box-shadow: inset 2px 2px 2px rgba(203, 215, 226, 0.8),
       inset -2px -2px 2px #ffffff;
   }
+`;
+
+const HR = styled.hr`
+  width: 4px;
+  height: 114px;
+  background: #f2f6fa;
+  background: #f2f6fa;
+  box-shadow: inset 2px 2px 2px rgba(203, 215, 226, 0.8);
+  border-radius: 2px;
 `;
 
 const ContentWrapper = styled.div`
@@ -70,7 +90,6 @@ const ContentText = styled.p`
   color: #222222;
   font-weight: 400;
   font-size: 16px;
-  margin-bottom: 28px;
 `;
 
 export default ResumeBox;
