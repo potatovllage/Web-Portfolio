@@ -11,31 +11,44 @@ interface Props {
 
 const PortfolioBox = ({ onClick, field, date, img, title }: Props) => {
   return (
-    <Wrapper onClick={onClick}>
-      <ImgWrapper>
-        <Image width={338} height={190} src={img} alt="img" />
-      </ImgWrapper>
-      <PortfolioTitle>{title}</PortfolioTitle>
-      <PortfolioDate>{date}</PortfolioDate>
-      <PortfolioField>{field}</PortfolioField>
-    </Wrapper>
+    <WrapperCover>
+      <Wrapper onClick={onClick}>
+        <ImgWrapper>
+          <Image width={338} height={190} src={img} alt="img" />
+        </ImgWrapper>
+        <PortfolioTitle>{title}</PortfolioTitle>
+        <PortfolioDate>{date}</PortfolioDate>
+        <PortfolioField>{field}</PortfolioField>
+      </Wrapper>
+    </WrapperCover>
   );
 };
 
-const Wrapper = styled.div`
+const WrapperCover = styled.div`
   width: 370px;
   height: 320px;
   cursor: pointer;
-  padding: 16px 16px 24px 16px;
-  border-radius: 16px;
-  background: #e7edf3;
-  box-shadow: 3px 3px 8px rgba(203, 215, 226, 0.8), -3px -3px 8px #ffffff;
   border-radius: 16px;
   -ms-user-select: none;
   -moz-user-select: -moz-none;
   -khtml-user-select: none;
   -webkit-user-select: none;
   user-select: none;
+
+  :hover {
+    background: #e7edf3;
+    box-shadow: 3px 3px 8px rgba(203, 215, 226, 0.8), -3px -3px 8px #ffffff;
+  }
+`;
+
+const Wrapper = styled.div`
+  width: 366px;
+  height: 316px;
+  padding: 16px 16px 24px 16px;
+  border-radius: 16px;
+  background: #e7edf3;
+  box-shadow: 3px 3px 8px rgba(203, 215, 226, 0.8), -3px -3px 8px #ffffff;
+  border-radius: 16px;
 
   :hover {
     background: #f2f6fa;
