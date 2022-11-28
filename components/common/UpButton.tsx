@@ -17,6 +17,8 @@ const UpButton = () => {
 };
 
 const UpButtonCover = styled.div`
+  position: fixed;
+  bottom: 120px;
   width: 60px;
   height: 60px;
   border-radius: 100%;

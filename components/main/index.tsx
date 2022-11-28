@@ -23,20 +23,24 @@ const Main = () => {
   };
 
   return (
-    <Wrapper>
-      <MenuContainer>
-        {BtnData.data.map((data, idx) => (
-          <DefaultBtn
-            btnState={btnState === idx ? true : false}
-            onClick={() => onClickBtn(idx)}
-          >
-            {data.value}
-          </DefaultBtn>
-        ))}
-      </MenuContainer>
-      <MainContainer>{tab[btnState]}</MainContainer>
-      <UpButton />
-    </Wrapper>
+    <>
+      <Wrapper>
+        <MenuContainer>
+          {BtnData.data.map((data, idx) => (
+            <DefaultBtn
+              btnState={btnState === idx ? true : false}
+              onClick={() => onClickBtn(idx)}
+            >
+              {data.value}
+            </DefaultBtn>
+          ))}
+        </MenuContainer>
+        <MainContainer>{tab[btnState]}</MainContainer>
+      </Wrapper>
+      <UpBtnContainer>
+        <UpButton />
+      </UpBtnContainer>
+    </>
   );
 };
 
@@ -53,6 +57,11 @@ const MenuContainer = styled.div`
 
 const MainContainer = styled.div`
   margin-top: 24px;
+  padding-right: 40px;
+`;
+
+const UpBtnContainer = styled.div`
+  position: relative;
 `;
 
 export default Main;
