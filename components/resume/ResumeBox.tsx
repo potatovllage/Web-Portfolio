@@ -86,6 +86,7 @@ const ContentDate = styled.p`
 `;
 
 const ContentText = styled.p`
+  line-height: 26px;
   width: 560px;
   color: #222222;
   font-weight: 400;

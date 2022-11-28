@@ -49,6 +49,7 @@ const Wrapper = styled.div`
 
     > div {
       > img {
+        border-radius: 16px;
         transform: scale(1.1);
         transition: transform 1s;
         filter: opacity(0.6) drop-shadow(0 0 0 #082642);
@@ -57,15 +58,22 @@ const Wrapper = styled.div`
   }
 
   > img {
-    filter: drop-shadow(3px 3px 8px rgba(203, 215, 226, 0.8))
-      drop-shadow(-3px -3px 8px #ffffff);
-    margin-bottom: 20px;
+    border-radius: 16px;
   }
 `;
 
 const ImgWrapper = styled.div`
+  border-radius: 16px;
   overflow: hidden;
+  margin-bottom: 12px;
+  filter: drop-shadow(3px 3px 8px rgba(203, 215, 226, 0.8))
+    drop-shadow(-3px -3px 8px #ffffff);
   margin-bottom: 20px;
+
+  :hover {
+    filter: drop-shadow(3px 3px 8px rgba(203, 215, 226, 0.8))
+      drop-shadow(-3px -3px 8px #ffffff);
+  }
 `;
 
 const PortfolioTitle = styled.h1`
@@ -73,6 +81,7 @@ const PortfolioTitle = styled.h1`
   font-weight: 700;
   font-size: 18px;
   margin-bottom: 4px;
+  margin-left: 12px;
 `;
 
 const PortfolioDate = styled.p`
@@ -80,12 +89,14 @@ const PortfolioDate = styled.p`
   font-weight: 400;
   font-size: 16px;
   margin-bottom: 8px;
+  margin-left: 12px;
 `;
 
 const PortfolioField = styled.p`
   color: #222222;
   font-weight: 400;
   font-size: 16px;
+  margin-left: 12px;
 `;
 
 export default PortfolioBox;
