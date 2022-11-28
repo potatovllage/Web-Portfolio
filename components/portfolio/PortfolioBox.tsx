@@ -31,6 +31,11 @@ const Wrapper = styled.div`
   background: #e7edf3;
   box-shadow: 3px 3px 8px rgba(203, 215, 226, 0.8), -3px -3px 8px #ffffff;
   border-radius: 16px;
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 
   :hover {
     background: #f2f6fa;

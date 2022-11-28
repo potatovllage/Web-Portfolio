@@ -45,6 +45,11 @@ const DefaultBtnBox = styled.button<{ state: boolean }>`
   color: ${({ state }) => (state ? "#FFFFFF" : "#377AB9")};
   font-size: 16px;
   font-weight: 700;
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
   :hover {
     color: ${({ state }) => (state ? "" : "#629fd8")};
     background: ${({ state }) => (state ? "" : "#f2f6fa")};

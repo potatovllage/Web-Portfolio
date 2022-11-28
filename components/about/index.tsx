@@ -459,6 +459,11 @@ const AwardNotionContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   cursor: pointer;
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 
   > p {
     margin-right: 8px;
