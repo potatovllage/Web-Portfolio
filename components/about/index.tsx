@@ -8,6 +8,7 @@ import onRto from "../../assets/organizations/onRto.svg";
 import onBagger from "../../assets/organizations/onBagger.svg";
 import { openWindow } from "../../utils/function/openWindow";
 import PageTitle from "../common/PageTitle";
+import leftVector from "../../assets/Icon/leftVector.svg";
 
 const About = () => {
   return (
@@ -171,6 +172,16 @@ const About = () => {
               해커톤입니다. FrontEnd 개발자로 참가하였습니다. 현업 재직자,
               대학생 분들과 같이 프로젝트를 해본 좋은 경험이였습니다.
             </AwardContentText>
+            <AwardNotionContainer
+              onClick={() =>
+                openWindow(
+                  "https://www.notion.so/f1925d8a37c14337ba80b0122bf61ce6?v=bcb8bb40215746d9ac3334519bb88080"
+                )
+              }
+            >
+              <p>노션 바로가기</p>
+              <Image width={16} height={16} src={leftVector} alt=">" />
+            </AwardNotionContainer>
           </AwardContentWrapper>
         </AwardBox>
         <AwardBox>
@@ -187,6 +198,16 @@ const About = () => {
               참가하였습니다. 디자이너, 백엔드, AI 팀원 3명과 같이 즐겁게
               개발하여 수상도 할 수 있었던 것 같습니다.
             </AwardContentText>
+            <AwardNotionContainer
+              onClick={() =>
+                openWindow(
+                  "https://www.notion.so/f1925d8a37c14337ba80b0122bf61ce6?v=bcb8bb40215746d9ac3334519bb88080"
+                )
+              }
+            >
+              <p>노션 바로가기</p>
+              <Image width={16} height={16} src={leftVector} alt=">" />
+            </AwardNotionContainer>
           </AwardContentWrapper>
         </AwardBox>
         <AwardBox>
@@ -203,6 +224,16 @@ const About = () => {
               참여하였습니다. 같은 동아리 친구 4명과 함깨하였고 예선 80팀을 뚫고
               본선 20팀에 뽑혀 장려상을 수상 할 수 있었습니다.
             </AwardContentText>
+            <AwardNotionContainer
+              onClick={() =>
+                openWindow(
+                  "https://www.notion.so/f1925d8a37c14337ba80b0122bf61ce6?v=bcb8bb40215746d9ac3334519bb88080"
+                )
+              }
+            >
+              <p>노션 바로가기</p>
+              <Image width={16} height={16} src={leftVector} alt=">" />
+            </AwardNotionContainer>
           </AwardContentWrapper>
         </AwardBox>
       </AwardContainer>
@@ -231,6 +262,7 @@ const IntroContainer = styled.div`
     font-weight: 400;
     font-size: 16px;
     margin-bottom: 30px;
+    line-height: 26px;
   }
 `;
 
@@ -296,6 +328,7 @@ const ImDoingContent = styled.div`
   }
 
   > p {
+    line-height: 26px;
     font-size: 16px;
     font-weight: 400;
     color: #222222;
@@ -415,10 +448,25 @@ const AwardContentDate = styled.p`
 `;
 
 const AwardContentText = styled.p`
+  line-height: 26px;
   color: #222222;
   font-weight: 400;
   font-size: 16px;
   margin-bottom: 12px;
+`;
+
+const AwardNotionContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+
+  > p {
+    margin-right: 8px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #377ab9;
+  }
 `;
 
 export default About;
