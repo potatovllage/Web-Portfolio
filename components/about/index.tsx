@@ -465,6 +465,12 @@ const AwardNotionContainer = styled.div`
   -webkit-user-select: none;
   user-select: none;
 
+  :hover {
+    > p {
+      text-decoration: underline;
+    }
+  }
+
   > p {
     margin-right: 8px;
     font-weight: 400;
