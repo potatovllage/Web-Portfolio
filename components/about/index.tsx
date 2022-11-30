@@ -353,9 +353,8 @@ const ProjectOrgaTitle = styled.div`
 
 const OrganizationContainer = styled.div`
   width: 724px;
-  margin-left: 24px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-wrap: wrap;
 `;
 
@@ -365,7 +364,6 @@ const OrganizationImgCover = styled.div`
   align-items: center;
   width: 160px;
   height: 160px;
-  margin-right: 18px;
   background: #d9d9d9;
   border-radius: 30px;
   background: #e7edf3;
