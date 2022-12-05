@@ -121,7 +121,7 @@ const About = () => {
           <h1>Project Organization</h1>
         </ProjectOrgaTitle>
         <OrganizationContainer>
-          {/* OrganizationCover를 복붙하여 Img에 src에는 img openWindow에는 링크를 입력한다. */}
+          {/* 맨 위 OrganizationContent에 사진 및 url을 추가한다. */}
           {organizationContent.map((item, idx) => (
             <OrganizationImgCover>
               <Image
