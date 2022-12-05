@@ -10,6 +10,19 @@ import { openWindow } from "../../utils/function/openWindow";
 import PageTitle from "../common/PageTitle";
 import leftVector from "../../assets/Icon/leftVector.svg";
 
+const organizationContent = [
+  {
+    img: onMoiza,
+    openUrl: "https://github.com/Software-Meister-High-School-Community",
+  },
+  { img: onWalkHub, openUrl: "https://github.com/Walkhub" },
+  {
+    img: onRto,
+    openUrl: "https://github.com/Software-High-School-United-Hackathon",
+  },
+  { img: onBagger, openUrl: "https://github.com/unithon-9th-10th" },
+];
+
 const About = () => {
   return (
     <Wrapper>
@@ -109,50 +122,17 @@ const About = () => {
         </ProjectOrgaTitle>
         <OrganizationContainer>
           {/* OrganizationCover를 복붙하여 Img에 src에는 img openWindow에는 링크를 입력한다. */}
-          <OrganizationImgCover>
-            <Image
-              width={156}
-              height={156}
-              src={onMoiza}
-              onClick={() =>
-                openWindow(
-                  "https://github.com/Software-Meister-High-School-Community"
-                )
-              }
-              alt="icon"
-            />
-          </OrganizationImgCover>
-          <OrganizationImgCover>
-            <Image
-              width={156}
-              height={156}
-              src={onWalkHub}
-              onClick={() => openWindow("https://github.com/Walkhub")}
-              alt="icon"
-            />
-          </OrganizationImgCover>
-          <OrganizationImgCover>
-            <Image
-              width={156}
-              height={156}
-              src={onRto}
-              onClick={() =>
-                openWindow(
-                  "https://github.com/Software-High-School-United-Hackathon"
-                )
-              }
-              alt="icon"
-            />
-          </OrganizationImgCover>
-          <OrganizationImgCover>
-            <Image
-              width={156}
-              height={156}
-              src={onBagger}
-              onClick={() => openWindow("https://github.com/unithon-9th-10th")}
-              alt="icon"
-            />
-          </OrganizationImgCover>
+          {organizationContent.map((item, idx) => (
+            <OrganizationImgCover>
+              <Image
+                width={156}
+                height={156}
+                src={item.img}
+                onClick={() => openWindow(item.openUrl)}
+                alt="icon"
+              />
+            </OrganizationImgCover>
+          ))}
         </OrganizationContainer>
       </ProjectOrganization>
       <AwardContainer>
