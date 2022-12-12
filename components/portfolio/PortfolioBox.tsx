@@ -1,5 +1,7 @@
 import styled from "@emotion/styled";
+import hoverImg from "../../assets/hoverLink.svg";
 import Image, { StaticImageData } from "next/image";
+import { useState } from "react";
 
 interface Props {
   title: string;
@@ -10,9 +12,24 @@ interface Props {
 }
 
 const PortfolioBox = ({ onClick, field, date, img, title }: Props) => {
+  const [isHover, setIsHover] = useState<boolean>();
+
   return (
     <WrapperCover>
-      <Wrapper onClick={onClick}>
+      <Wrapper
+        onClick={onClick}
+        onMouseEnter={() => setIsHover(true)}
+        onMouseLeave={() => setIsHover(false)}
+      >
+        {isHover! && (
+          <Image
+            className="hoverImg"
+            width={65}
+            height={65}
+            src={hoverImg}
+            alt="link"
+          />
+        )}
         <ImgWrapper>
           <Image width={338} height={190} src={img} alt="img" />
         </ImgWrapper>
@@ -42,6 +59,7 @@ const WrapperCover = styled.div`
 `;
 
 const Wrapper = styled.div`
+  position: relative;
   width: 366px;
   height: 316px;
   padding: 16px 16px 24px 16px;
@@ -49,6 +67,15 @@ const Wrapper = styled.div`
   background: #e7edf3;
   box-shadow: 3px 3px 8px rgba(203, 215, 226, 0.8), -3px -3px 8px #ffffff;
   border-radius: 16px;
+
+  .hoverImg {
+    position: absolute;
+    top: 77px;
+    left: 150px;
+    z-index: 99;
+    background-color: rgba(255, 255, 255, 0);
+    filter: drop-shadow(0px 0px 16px rgba(55, 122, 185, 0.8));
+  }
 
   :hover {
     background: #f2f6fa;
